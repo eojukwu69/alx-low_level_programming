@@ -1,4 +1,3 @@
-#include <ctype.h>
 /**
  * _isupper - entry point to the file
  * @c: character to be checked
