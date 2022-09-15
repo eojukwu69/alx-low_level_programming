@@ -1,6 +1,18 @@
 #include "main.h"
 #include "_putchar.h"
 
+
+/**
+ * putchars - function called
+ * @var: value
+ * Description: print from 0 - 9
+ * Return: returns the result
+ */
+void putchars(char var)
+{
+	_putchar(var);
+}
+
 /**
  * my_putchar - function called
  * @var: value
@@ -12,7 +24,7 @@ void my_putchar(int var)
 
 if (var < 0)
 {
-_putchar('-');
+putchars('-');
 var = var * -1;
 }
 
@@ -20,7 +32,7 @@ var = var * -1;
 if (var / 10)
 my_putchar(var / 10);
 
-_putchar((var % 10) + '0');
+putchars((var % 10) + '0');
 }
 
 /**
@@ -40,6 +52,6 @@ void more_numbers(void)
 		{
 		my_putchar(j);
 		}
-		_putchar('\n');
+		putchars('\n');
 	}
 }
