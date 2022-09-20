@@ -27,15 +27,15 @@ void rev_string(char *s)
 {
 	int i;
 
-	char a[500]
+	char a[500];
 
 	int length = _strlen(s);
 
-	for (i = length - 1; i >= 0; i--)
+	for (i = 0; i < length; i++)
 	{
-		a[i] = s[i];
+		a[i] = s[(length - 1) - i];
 	}
 
-	*s = a;
-
+	for (i = 0; i < length; i++)
+		s[i] = a[i];
 }
