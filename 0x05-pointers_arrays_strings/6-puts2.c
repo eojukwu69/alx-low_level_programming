@@ -19,27 +19,23 @@ int _strlen(char *s)
 }
 
 /**
- * puts_half - function call
+ * puts2 - function call
  * @str:  value
  * Return: value
  */
-void puts_half(char *str)
+void puts2(char *str)
 {
 	int i;
 
 	int length = _strlen(str);
 
-	if (length % 2 != 0)
+	for (i = 0; i < length; i++)
 	{
-		i = (length / 1) / 2;
+		if (i == 0 || i % 2 ==0)
+		{
+			_putchar(str[i]);
+		}
 	}
-	else
-	{
-		i = length / 2;
-	}
-
-	for (; i < length; i++)
-		_putchar(str[i]);
 
 	_putchar('\n');
 
