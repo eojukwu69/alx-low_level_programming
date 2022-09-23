@@ -28,7 +28,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int i;
 
-	int length = _strlen(src);
+	int length = _strlen(s1);
 
 	for (i = 0; i < length; i++)
 	{
