@@ -34,7 +34,7 @@ char *_strcat(char *dest, char *src)
 
 	int count = 0;
 
-	for (i = length; i < length + length2; i++)
+	for (i = length2; i < length + length2; i++)
 	{
 		dest[i] = src[count];
 		count += 1;
