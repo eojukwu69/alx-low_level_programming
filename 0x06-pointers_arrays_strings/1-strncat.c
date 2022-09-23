@@ -29,18 +29,23 @@ char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 
-	int length = _strlen(src);
-
 	int length2 = _strlen(dest);
+
+	int length = _strlen(src);
 
 	int count = 0;
 
-	for (i = length2; i < n + length2; i++)
+
+	if (n < length)
+	{
+		length = n;
+	}
+
+	for (i = length2; i < length + length2; i++)
 	{
 		dest[i] = src[count];
 		count += 1;
 	}
-	dest[n + length2] = '\0';
 
 	return (dest);
 }
